@@ -1,16 +1,6 @@
 ﻿<Properties GitUserInfo="UsingMD" StartupConfiguration="{EFDAF75C-6BB9-4A74-B4AE-D8854315C335}|Bank">
   <MonoDevelop.Ide.ItemProperties.src.1-entrypoint.Bank.Api PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.Workbench>
-    <Files>
-      <File FileName="Bank.Infrastructure.Bootstrap/AutofacModules/Features/LoanModule.cs" Line="3" Column="20" />
-      <File FileName="Bank.Infrastructure.Bootstrap/ApplicationStartup.cs" Line="36" Column="47" />
-      <File FileName="Bank.Infrastructure/DataAccess/EF/LoanRepository.cs" Line="20" Column="1" />
-      <File FileName="Bank.Infrastructure.Bootstrap/ApplicationBuilder/UseInitializer.cs" Line="1" Column="13" />
-      <File FileName="Bank.Infrastructure/DataAccess/EF/Init/DataLoader.cs" Line="25" Column="37" />
-      <File FileName="Bank.Infrastructure/DataAccess/EF/Init/DemoLoanFactory.cs" Line="1" Column="1" />
-      <File FileName="Bank.Infrastructure.Bootstrap/Extensions/ServiceCollection/DataLoaderInstallerServiceCollectionExtensions.cs" Line="15" Column="1" />
-      <File FileName="Bank.Application/Features/Loans/Queries/FindAllLoansQueryHandler.cs" Line="22" Column="1" />
-    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
