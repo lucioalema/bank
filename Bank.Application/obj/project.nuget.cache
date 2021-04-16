@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "9XKvkNBJVN1mBIZfWwj8himbyAu/BFj7qW6xnQ/suc6Qesz02b95FVezQjmuJJ4vOUBH/nEQMcYHOWNCZ/RJdg==",
+  "success": true,
+  "projectFilePath": "/Users/lucio/Documents/repos/Bank/Bank.Application/Bank.Application.csproj",
+  "expectedPackageFiles": [
+    "/Users/lucio/.nuget/packages/fluentvalidation/10.0.2/fluentvalidation.10.0.2.nupkg.sha512",
+    "/Users/lucio/.nuget/packages/mediatr/9.0.0/mediatr.9.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

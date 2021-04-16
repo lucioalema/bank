@@ -1,0 +1,17 @@
+F:/repos/src/Templates/Bank/Bank.Domain/obj/Debug/netcoreapp3.1/Bank.Domain.AssemblyInfoInputs.cache
+F:/repos/src/Templates/Bank/Bank.Domain/obj/Debug/netcoreapp3.1/Bank.Domain.AssemblyInfo.cs
+F:/repos/src/Templates/Bank/Bank.Domain/obj/Debug/netcoreapp3.1/Bank.Domain.csproj.CoreCompileInputs.cache
+F:/repos/src/Templates/Bank/Bank.Domain/bin/Debug/netcoreapp3.1/Bank.Domain.deps.json
+F:/repos/src/Templates/Bank/Bank.Domain/bin/Debug/netcoreapp3.1/Bank.Domain.dll
+F:/repos/src/Templates/Bank/Bank.Domain/bin/Debug/netcoreapp3.1/Bank.Domain.pdb
+F:/repos/src/Templates/Bank/Bank.Domain/obj/Debug/netcoreapp3.1/Bank.Domain.dll
+F:/repos/src/Templates/Bank/Bank.Domain/obj/Debug/netcoreapp3.1/Bank.Domain.pdb
+F:/repos/src/Templates/Bank/Bank.Domain/obj/Debug/netcoreapp3.1/Bank.Domain.csprojAssemblyReference.cache
+/Users/lucio/Documents/repos/Bank/Bank.Domain/bin/Debug/netcoreapp3.1/Bank.Domain.deps.json
+/Users/lucio/Documents/repos/Bank/Bank.Domain/bin/Debug/netcoreapp3.1/Bank.Domain.dll
+/Users/lucio/Documents/repos/Bank/Bank.Domain/bin/Debug/netcoreapp3.1/Bank.Domain.pdb
+/Users/lucio/Documents/repos/Bank/Bank.Domain/obj/Debug/netcoreapp3.1/Bank.Domain.AssemblyInfoInputs.cache
+/Users/lucio/Documents/repos/Bank/Bank.Domain/obj/Debug/netcoreapp3.1/Bank.Domain.AssemblyInfo.cs
+/Users/lucio/Documents/repos/Bank/Bank.Domain/obj/Debug/netcoreapp3.1/Bank.Domain.csproj.CoreCompileInputs.cache
+/Users/lucio/Documents/repos/Bank/Bank.Domain/obj/Debug/netcoreapp3.1/Bank.Domain.dll
+/Users/lucio/Documents/repos/Bank/Bank.Domain/obj/Debug/netcoreapp3.1/Bank.Domain.pdb

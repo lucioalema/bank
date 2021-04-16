@@ -1,0 +1,277 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/lucio/Documents/repos/Bank/Bank.Infrastructure.Bootstrap/Bank.Infrastructure.Bootstrap.csproj": {}
+  },
+  "projects": {
+    "/Users/lucio/Documents/repos/Bank/Bank.Application/Bank.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/lucio/Documents/repos/Bank/Bank.Application/Bank.Application.csproj",
+        "projectName": "Bank.Application",
+        "projectPath": "/Users/lucio/Documents/repos/Bank/Bank.Application/Bank.Application.csproj",
+        "packagesPath": "/Users/lucio/.nuget/packages/",
+        "outputPath": "/Users/lucio/Documents/repos/Bank/Bank.Application/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/lucio/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "/Users/lucio/Documents/repos/Bank/Bank.Domain/Bank.Domain.csproj": {
+                "projectPath": "/Users/lucio/Documents/repos/Bank/Bank.Domain/Bank.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[10.0.2, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.202/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/lucio/Documents/repos/Bank/Bank.Domain/Bank.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/lucio/Documents/repos/Bank/Bank.Domain/Bank.Domain.csproj",
+        "projectName": "Bank.Domain",
+        "projectPath": "/Users/lucio/Documents/repos/Bank/Bank.Domain/Bank.Domain.csproj",
+        "packagesPath": "/Users/lucio/.nuget/packages/",
+        "outputPath": "/Users/lucio/Documents/repos/Bank/Bank.Domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/lucio/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.202/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/lucio/Documents/repos/Bank/Bank.Infrastructure.Bootstrap/Bank.Infrastructure.Bootstrap.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/lucio/Documents/repos/Bank/Bank.Infrastructure.Bootstrap/Bank.Infrastructure.Bootstrap.csproj",
+        "projectName": "Bank.Infrastructure.Bootstrap",
+        "projectPath": "/Users/lucio/Documents/repos/Bank/Bank.Infrastructure.Bootstrap/Bank.Infrastructure.Bootstrap.csproj",
+        "packagesPath": "/Users/lucio/.nuget/packages/",
+        "outputPath": "/Users/lucio/Documents/repos/Bank/Bank.Infrastructure.Bootstrap/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/lucio/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "/Users/lucio/Documents/repos/Bank/Bank.Application/Bank.Application.csproj": {
+                "projectPath": "/Users/lucio/Documents/repos/Bank/Bank.Application/Bank.Application.csproj"
+              },
+              "/Users/lucio/Documents/repos/Bank/Bank.Infrastructure/Bank.Infrastructure.csproj": {
+                "projectPath": "/Users/lucio/Documents/repos/Bank/Bank.Infrastructure/Bank.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Autofac": {
+              "target": "Package",
+              "version": "[6.1.0, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[3.1.14, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[3.1.14, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.14, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.1.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.202/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/lucio/Documents/repos/Bank/Bank.Infrastructure/Bank.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/lucio/Documents/repos/Bank/Bank.Infrastructure/Bank.Infrastructure.csproj",
+        "projectName": "Bank.Infrastructure",
+        "projectPath": "/Users/lucio/Documents/repos/Bank/Bank.Infrastructure/Bank.Infrastructure.csproj",
+        "packagesPath": "/Users/lucio/.nuget/packages/",
+        "outputPath": "/Users/lucio/Documents/repos/Bank/Bank.Infrastructure/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/lucio/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "/Users/lucio/Documents/repos/Bank/Bank.Domain/Bank.Domain.csproj": {
+                "projectPath": "/Users/lucio/Documents/repos/Bank/Bank.Domain/Bank.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[3.1.14, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.202/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
