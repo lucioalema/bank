@@ -1,5 +1,7 @@
 ﻿using Autofac;
+using Bank.Application.Behaviors;
 using Bank.Application.Features.Loans.Queries;
+using MediatR;
 
 namespace Bank.Infrastructure.Bootstrap.AutofacModules
 {
@@ -17,12 +19,12 @@ namespace Bank.Infrastructure.Bootstrap.AutofacModules
             builder.RegisterAssemblyTypes(typeof(FindAllLoansQuery).Assembly)
                 .AsImplementedInterfaces();
 
-            //if (this.enableCommandLogging)
-            //{
-            //    builder.RegisterGeneric(typeof(LoggingBehavior<,>)).As(typeof(IPipelineBehavior<,>));
-            //}
+            if (this.enableCommandLogging)
+            {
+                builder.RegisterGeneric(typeof(LoggingBehavior<,>)).As(typeof(IPipelineBehavior<,>));
+            }
 
-            //builder.RegisterGeneric(typeof(ValidatorBehavior<,>)).As(typeof(IPipelineBehavior<,>));
+            builder.RegisterGeneric(typeof(ValidatorBehavior<,>)).As(typeof(IPipelineBehavior<,>));
         }
     }
 }

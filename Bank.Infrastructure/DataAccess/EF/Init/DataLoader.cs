@@ -1,5 +1,4 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 
 namespace Bank.Infrastructure.DataAccess.EF.Init
 {
@@ -14,13 +13,24 @@ namespace Bank.Infrastructure.DataAccess.EF.Init
 
         public void Seed()
         {
+            dbContext.Database.EnsureDeleted();
             dbContext.Database.EnsureCreated();
             if (dbContext.Loans.Any())
             {
                 return;
             }
 
-            dbContext.Loans.Add(DemoLoanFactory.FirstLoan());
+            var rates = DemoRateFactory.SeedRates();
+            dbContext.Rates.AddRange(rates);
+
+            var fees = DemoFeeFactory.SeedFees();
+            dbContext.Fees.AddRange(fees);
+
+            dbContext.Loans.Add(
+                DemoLoanFactory.FirstLoan(
+                    rates.FirstOrDefault(x => x.AnnualInterestRate == 5m),
+                    fees.FirstOrDefault(x => x.Rate == 1 && x.Amount == 10000)
+                    ));
 
             dbContext.SaveChanges();
         }

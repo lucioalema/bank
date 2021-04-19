@@ -19,6 +19,7 @@ namespace Bank.Infrastructure.DataAccess.EF
         {
             return await loanDbContext
                .Loans
+               .Include("Rate")
                .ToListAsync();
         }
 
@@ -26,7 +27,22 @@ namespace Bank.Infrastructure.DataAccess.EF
         {
             return await loanDbContext
                 .Loans
+                .Include("Rate")
                 .FirstOrDefaultAsync(p => p.Id == id);
+        }
+
+        public async Task<Loan> Add(Loan loan)
+        {
+            await loanDbContext.AddAsync(loan);
+            await loanDbContext.SaveChangesAsync();
+            return loan;
+        }
+
+        public async Task<Loan> Update(Loan loan)
+        {
+            loanDbContext.Update(loan);
+            await loanDbContext.SaveChangesAsync();
+            return loan;
         }
     }
 }

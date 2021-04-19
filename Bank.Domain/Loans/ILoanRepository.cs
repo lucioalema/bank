@@ -8,5 +8,7 @@ namespace Bank.Domain.Loans
     {
         Task<IEnumerable<Loan>> FindAll();
         Task<Loan> FindById(Guid id);
+        Task<Loan> Add(Loan loan);
+        Task<Loan> Update(Loan loan);
     }
 }

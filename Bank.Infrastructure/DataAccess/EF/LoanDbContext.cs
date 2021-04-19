@@ -1,6 +1,7 @@
-﻿using Bank.Domain.Loans;
+﻿using Bank.Domain.Fees;
+using Bank.Domain.Loans;
+using Bank.Domain.Rates;
 using Microsoft.EntityFrameworkCore;
-using ProductService.DataAccess.EF.Configuration;
 
 namespace Bank.Infrastructure.DataAccess.EF
 {
@@ -10,53 +11,12 @@ namespace Bank.Infrastructure.DataAccess.EF
         { }
 
         public DbSet<Loan> Loans { get; set; }
+        public DbSet<Rate> Rates { get; set; }
+        public DbSet<Fee> Fees { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.EnableSensitiveDataLogging();
         }
-
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.ApplyConfiguration(new LoanConfig());
-        }
     }
-    //public class ProductDbContext : DbContext
-    //{
-    //    public ProductDbContext(DbContextOptions<ProductDbContext> options) : base(options)
-    //    { }
-
-    //    public DbSet<Product> Products { get; set; }
-    //    public DbSet<Question> Questions { get; set; }
-    //    public DbSet<Cover> Covers { get; set; }
-    //    public DbSet<Choice> Choices { get; set; }
-
-    //    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    //    {
-    //        optionsBuilder.EnableSensitiveDataLogging();
-    //    }
-
-    //    protected override void OnModelCreating(ModelBuilder modelBuilder)
-    //    {
-    //        modelBuilder.ApplyConfiguration(new ProductConfig());
-
-    //        modelBuilder.Entity<Cover>().HasOne(p => p.Product).WithMany(c => c.Covers);
-    //        modelBuilder.Entity<Cover>().Property(c => c.Code).IsRequired();
-    //        modelBuilder.Entity<Cover>().Property(c => c.Name).IsRequired();
-
-    //        modelBuilder.Entity<Question>().HasOne(p => p.Product).WithMany(p => p.Questions);
-    //        modelBuilder.Entity<Question>().Property(q => q.Code).IsRequired();
-    //        modelBuilder.Entity<Question>().Property(q => q.Index).IsRequired();
-
-    //        modelBuilder.Entity<Question>()
-    //        .HasDiscriminator<int>("QuestionType")
-    //        .HasValue<Question>(0)
-    //        .HasValue<NumericQuestion>(1)
-    //        .HasValue<DateQuestion>(2)
-    //        .HasValue<ChoiceQuestion>(3);
-
-    //        modelBuilder.Entity<Choice>().HasKey("Code");
-    //        modelBuilder.Entity<Choice>().HasOne(q => q.Question).WithMany(c => c.Choices);
-    //    }
-    //}
 }

@@ -1,40 +1,62 @@
 ﻿<Properties GitUserInfo="UsingMD" StartupConfiguration="{EFDAF75C-6BB9-4A74-B4AE-D8854315C335}|Bank">
   <MonoDevelop.Ide.ItemProperties.src.1-entrypoint.Bank.Api PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.Workbench>
+    <Files>
+      <File FileName="Bank.Domain/Loans/Loan.cs" Line="91" Column="42" />
+      <File FileName="Bank.Application/Features/Loans/Dtos/LoanDto.cs" />
+      <File FileName="Bank.Application/Features/Loans/Commands/ApproveLoanCommand.cs" />
+      <File FileName="Bank.Application/Features/Loans/Commands/CreateLoanCommandHandler.cs" />
+      <File FileName="Bank/Controllers/Loans/LoansController.cs" />
+      <File FileName="Bank.Domain/Loans/ILoanRepository.cs" />
+      <File FileName="Bank.Infrastructure/DataAccess/EF/LoanRepository.cs" />
+      <File FileName="Bank.Infrastructure.Bootstrap/ApplicationStartup.cs" />
+      <File FileName="Bank.Infrastructure.Bootstrap/Extensions/ServiceCollection/AddAuthenticationConfiguration.cs" />
+      <File FileName="Bank.Infrastructure.Bootstrap/Extensions/ServiceCollection/SwaggerServiceCollectionExtensions.cs" />
+      <File FileName="Bank.Infrastructure/DataAccess/EF/LoanDbContext.cs" Line="1" Column="1" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Bank" expanded="True" selected="True">
+          <Node name="Bank" expanded="True">
             <Node name="src" expanded="True">
               <Node name="1-entrypoint" expanded="True">
-                <Node name="Bank.Api" expanded="True" />
+                <Node name="Bank.Api" expanded="True">
+                  <Node name="Controllers" expanded="True">
+                    <Node name="Loans" expanded="True" />
+                  </Node>
+                </Node>
               </Node>
               <Node name="2-core" expanded="True">
                 <Node name="Bank.Application" expanded="True">
-                  <Node name="Features" expanded="True">
-                    <Node name="Loans" expanded="True">
-                      <Node name="Dtos" expanded="True" />
-                      <Node name="Queries" expanded="True" />
-                    </Node>
-                  </Node>
+                  <Node name="Features" expanded="True" />
+                </Node>
+                <Node name="Bank.Domain" expanded="True">
+                  <Node name="Exceptions" expanded="True" />
+                  <Node name="Loans" expanded="True" />
                 </Node>
               </Node>
               <Node name="3-infrastructure" expanded="True">
                 <Node name="Bank.Infrastructure" expanded="True">
-                  <Node name="Dependencies" expanded="True" />
                   <Node name="DataAccess" expanded="True">
                     <Node name="EF" expanded="True">
                       <Node name="Init" expanded="True" />
+                      <Node name="LoanDbContext.cs" selected="True" />
                     </Node>
                   </Node>
                 </Node>
                 <Node name="Bank.Infrastructure.Bootstrap" expanded="True">
                   <Node name="ApplicationBuilder" expanded="True" />
-                  <Node name="AutofacModules" expanded="True">
-                    <Node name="Features" expanded="True" />
-                  </Node>
                   <Node name="Extensions" expanded="True">
                     <Node name="ServiceCollection" expanded="True" />
+                  </Node>
+                </Node>
+              </Node>
+            </Node>
+            <Node name="test" expanded="True">
+              <Node name="Bank.Application.Test" expanded="True">
+                <Node name="Features" expanded="True">
+                  <Node name="Rates" expanded="True">
+                    <Node name="Queries" expanded="True" />
                   </Node>
                 </Node>
               </Node>
@@ -49,7 +71,6 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/lucio/Documents/repos/Bank/Bank.Infrastructure.Bootstrap/ApplicationBuilder/ExceptionHandlerBuilderExtensions.cs" relfile="Bank.Infrastructure.Bootstrap/ApplicationBuilder/ExceptionHandlerBuilderExtensions.cs" line="41" column="1" />
-      <Breakpoint file="/Users/lucio/Documents/repos/Bank/Bank.Infrastructure/DataAccess/EF/Init/DemoLoanFactory.cs" relfile="Bank.Infrastructure/DataAccess/EF/Init/DemoLoanFactory.cs" line="9" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />

@@ -9,6 +9,7 @@ using MediatR;
 using Bank.Application.Features.Loans.Queries;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Bank.Infrastructure.Bootstrap.ApplicationBuilder;
+using System.Text.Json.Serialization;
 
 namespace Bank.Infrastructure.Bootstrap
 {
@@ -26,11 +27,10 @@ namespace Bank.Infrastructure.Bootstrap
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddSwagger("v1", "MicroserviceExample", "v1");
+            services.AddSwagger("v1", "Bank.Api", "v1");
             services.ConfigureResponseCompression();
-            //services.AddHttpClientFactory(configuration);
             services.AddHttpContextAccessor();
-            //services.AddCorsConfiguration();
+            services.AddCorsConfiguration();
             services.AddEFConfiguration(configuration);
             services.AddMediatR(typeof(FindAllLoansQuery).Assembly);
             services.AddLoanDemoInitializer();
@@ -38,7 +38,7 @@ namespace Bank.Infrastructure.Bootstrap
             {
                 o.Filters.Add(new ProducesResponseTypeAttribute(400));
                 o.Filters.Add(new ProducesResponseTypeAttribute(500));
-            });
+            }).AddJsonOptions(opts => opts.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()));
         }
 
         public void ConfigureContainer(ContainerBuilder builder)
@@ -50,11 +50,10 @@ namespace Bank.Infrastructure.Bootstrap
         {
             app.UseRouting();
             app.UseAuthentication();
-            //app.UseMicroserviceExampleHealthChecks();
             app.UseResponseCompression();
             app.UseMicroserviceExampleSwagger();
             app.UseInitializer();
-            //app.UseCorsConfiguration();
+            app.UseCorsConfiguration();
             app.UseExceptionHandler(errorPipeline =>
             {
                 errorPipeline.UseExceptionHandlerMiddleware(this.configuration.GetValue("AppSettings:IncludeErrorDetailInResponse", false));
@@ -77,7 +76,7 @@ namespace Bank.Infrastructure.Bootstrap
                         .AddAuthenticationSchemes(JwtBearerDefaults.AuthenticationScheme);
                 });
             });
-            //services.AddAuthenticationConfiguration(configuration);
+            services.AddAuthenticationConfiguration(configuration);
         }
     }
 }

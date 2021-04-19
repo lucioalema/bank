@@ -101,6 +101,8 @@ F:/repos/src/Templates/Bank/Bank/bin/Debug/netcoreapp3.1/Serilog.Sinks.File.dll
 /Users/lucio/Documents/repos/Bank/Bank/bin/Debug/netcoreapp3.1/MediatR.dll
 /Users/lucio/Documents/repos/Bank/Bank/bin/Debug/netcoreapp3.1/MediatR.Extensions.Microsoft.DependencyInjection.dll
 /Users/lucio/Documents/repos/Bank/Bank/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Users/lucio/Documents/repos/Bank/Bank/bin/Debug/netcoreapp3.1/Microsoft.Bcl.AsyncInterfaces.dll
+/Users/lucio/Documents/repos/Bank/Bank/bin/Debug/netcoreapp3.1/Microsoft.Bcl.HashCode.dll
 /Users/lucio/Documents/repos/Bank/Bank/bin/Debug/netcoreapp3.1/Microsoft.Data.SqlClient.dll
 /Users/lucio/Documents/repos/Bank/Bank/bin/Debug/netcoreapp3.1/Microsoft.DotNet.PlatformAbstractions.dll
 /Users/lucio/Documents/repos/Bank/Bank/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.dll
@@ -110,7 +112,9 @@ F:/repos/src/Templates/Bank/Bank/bin/Debug/netcoreapp3.1/Serilog.Sinks.File.dll
 /Users/lucio/Documents/repos/Bank/Bank/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.SqlServer.dll
 /Users/lucio/Documents/repos/Bank/Bank/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Caching.Abstractions.dll
 /Users/lucio/Documents/repos/Bank/Bank/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Caching.Memory.dll
+/Users/lucio/Documents/repos/Bank/Bank/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Configuration.dll
 /Users/lucio/Documents/repos/Bank/Bank/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Configuration.Abstractions.dll
+/Users/lucio/Documents/repos/Bank/Bank/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Configuration.Binder.dll
 /Users/lucio/Documents/repos/Bank/Bank/bin/Debug/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.dll
 /Users/lucio/Documents/repos/Bank/Bank/bin/Debug/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.Abstractions.dll
 /Users/lucio/Documents/repos/Bank/Bank/bin/Debug/netcoreapp3.1/Microsoft.Extensions.DependencyModel.dll
@@ -176,7 +180,3 @@ F:/repos/src/Templates/Bank/Bank/bin/Debug/netcoreapp3.1/Serilog.Sinks.File.dll
 /Users/lucio/Documents/repos/Bank/Bank/obj/Debug/netcoreapp3.1/Bank.Api.dll
 /Users/lucio/Documents/repos/Bank/Bank/obj/Debug/netcoreapp3.1/Bank.Api.pdb
 /Users/lucio/Documents/repos/Bank/Bank/obj/Debug/netcoreapp3.1/Bank.Api.genruntimeconfig.cache
-/Users/lucio/Documents/repos/Bank/Bank/bin/Debug/netcoreapp3.1/Microsoft.Bcl.AsyncInterfaces.dll
-/Users/lucio/Documents/repos/Bank/Bank/bin/Debug/netcoreapp3.1/Microsoft.Bcl.HashCode.dll
-/Users/lucio/Documents/repos/Bank/Bank/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Configuration.dll
-/Users/lucio/Documents/repos/Bank/Bank/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Configuration.Binder.dll

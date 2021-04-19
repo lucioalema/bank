@@ -1896,7 +1896,8 @@
         "dependencies": {
           "Bank.Domain": "1.0.0",
           "FluentValidation": "10.0.2",
-          "MediatR": "9.0.0"
+          "MediatR": "9.0.0",
+          "Microsoft.Extensions.Logging": "3.1.14"
         },
         "compile": {
           "bin/placeholder/Bank.Application.dll": {}
