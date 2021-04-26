@@ -25,4 +25,7 @@
     <ProjectReference Include="..\..\Bank.Domain\Bank.Domain.csproj" />
     <ProjectReference Include="..\..\Bank.Infrastructure\Bank.Infrastructure.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\.editorconfig" />
+  </ItemGroup>
 </Project>
