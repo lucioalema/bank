@@ -30,7 +30,7 @@ namespace Bank.Auth.Api.Controllers.Users
 
         /// <summary>
         /// Get User by Id
-        [HttpGet("{id}")]
+        [HttpGet("{userName}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<UserDto> Get(string userName)

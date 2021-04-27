@@ -20,7 +20,7 @@
     "Bank.Auth.Api": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "weatherforecast",
+      "launchUrl": "api/users",
       "applicationUrl": "https://localhost:63748;http://localhost:20321",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
