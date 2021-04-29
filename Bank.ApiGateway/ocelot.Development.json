@@ -49,7 +49,7 @@
             "DownstreamScheme": "http",
             "DownstreamHostAndPorts": [
               {
-                "Host": "bank.api",
+                "Host": "bank.loans.api",
                 "Port": 4002
               }
             ],

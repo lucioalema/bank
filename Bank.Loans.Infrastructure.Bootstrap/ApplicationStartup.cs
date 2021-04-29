@@ -6,17 +6,17 @@ using Microsoft.AspNetCore.Hosting;
 using Autofac;
 using Bank.Loans.Infrastructure.Bootstrap.Extensions.ServiceCollection;
 using MediatR;
+using Bank.Loans.Application.Features.Loans.Queries;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Bank.Loans.Infrastructure.Bootstrap.ApplicationBuilder;
 using System.Text.Json.Serialization;
-using Bank.Auth.Infrastructure.Bootstrap.Extensions.ServiceCollection;
-using Bank.Auth.Infrastructure.Bootstrap.Extensions.ApplicationBuilder;
-using Microsoft.Extensions.Hosting;
-using Bank.Auth.Application.Features.Users.Queries;
 
-namespace Bank.Auth.Infrastructure.Bootstrap
+namespace Bank.Loans.Infrastructure.Bootstrap
 {
     public class ApplicationStartup
     {
         public IConfiguration configuration { get; }
+        private const string JWT_POLICY = "JwtPolicy";
         private readonly IWebHostEnvironment env;
 
         public ApplicationStartup(IConfiguration configuration, IWebHostEnvironment env)
@@ -27,12 +27,12 @@ namespace Bank.Auth.Infrastructure.Bootstrap
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddSwagger("v1", "Bank.Auth.Api", "v1");
+            services.AddSwagger("v1", "Bank.Api", "v1");
             services.ConfigureResponseCompression();
             services.AddHttpContextAccessor();
             services.AddCorsConfiguration();
             services.AddEFConfiguration(configuration);
-            services.AddMediatR(typeof(FindAllUsersQuery).Assembly);
+            services.AddMediatR(typeof(FindAllLoansQuery).Assembly);
             services.AddLoanDemoInitializer();
             services.AddControllers(o =>
             {
@@ -43,16 +43,11 @@ namespace Bank.Auth.Infrastructure.Bootstrap
 
         public void ConfigureContainer(ContainerBuilder builder)
         {
-            builder.AddConfigurationAutofac(configuration, env);
+            builder.AddConfigurationAutofac(configuration);
         }
 
         public void Configure(IApplicationBuilder app)
         {
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
-
             app.UseRouting();
             app.UseAuthentication();
             app.UseResponseCompression();
@@ -70,6 +65,18 @@ namespace Bank.Auth.Infrastructure.Bootstrap
                 endpoints.MapControllers();
             });
         }
+
+        public void ConfigureAuthorization(IServiceCollection services)
+        {
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy(JWT_POLICY, policy =>
+                {
+                    policy.RequireAuthenticatedUser()
+                        .AddAuthenticationSchemes(JwtBearerDefaults.AuthenticationScheme);
+                });
+            });
+            services.AddAuthenticationConfiguration(configuration);
+        }
     }
 }
-

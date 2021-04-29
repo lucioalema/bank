@@ -1,4 +1,4 @@
-﻿using Bank.Auth.Infrastructure.DataAccess.EF.Init;
+﻿using Bank.Loans.Infrastructure.DataAccess.EF.Init;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Bank.Loans.Infrastructure.Bootstrap.Extensions.ServiceCollection

@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Bank.Infrastructure.Bootstrap.Extensions.ServiceCollection
+namespace Bank.Loans.Infrastructure.Bootstrap.Extensions.ServiceCollection
 {
     public static class EFServiceCollectionExtensions
     {
