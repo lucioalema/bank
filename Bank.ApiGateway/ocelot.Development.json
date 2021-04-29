@@ -2,24 +2,24 @@
     "Routes": [
         {
             "DownstreamPathTemplate": "/api/users",
-            "DownstreamScheme": "https",
+            "DownstreamScheme": "http",
             "DownstreamHostAndPorts": [
-                {
-                    "Host": "localhost",
-                    "Port": 5001
-                }
+              {
+                "Host": "bank.auth.api",
+                "Port": 4001
+              }
             ],
             "UpstreamPathTemplate": "/api/users",
             "UpstreamHttpMethod": [ "Post" ]
         },
         {
             "DownstreamPathTemplate": "/api/users",
-            "DownstreamScheme": "https",
+            "DownstreamScheme": "http",
             "DownstreamHostAndPorts": [
-                {
-                    "Host": "localhost",
-                    "Port": 5001
-                }
+              {
+                "Host": "bank.auth.api",
+                "Port": 4001
+              }
             ],
             "UpstreamPathTemplate": "/api/users",
             "UpstreamHttpMethod": [ "Get" ],
@@ -30,12 +30,12 @@
         },
         {
             "DownstreamPathTemplate": "/api/users/{everything}",
-            "DownstreamScheme": "https",
+            "DownstreamScheme": "http",
             "DownstreamHostAndPorts": [
-                {
-                    "Host": "localhost",
-                    "Port": 5001
-                }
+              {
+                "Host": "bank.auth.api",
+                "Port": 4001
+              }
             ],
             "UpstreamPathTemplate": "/api/users/{everything}",
             "UpstreamHttpMethod": [ "Get", "Post" ],
@@ -46,12 +46,12 @@
         },
         {
             "DownstreamPathTemplate": "/api/loans",
-            "DownstreamScheme": "https",
+            "DownstreamScheme": "http",
             "DownstreamHostAndPorts": [
-                {
-                    "Host": "localhost",
-                    "Port": 5002
-                }
+              {
+                "Host": "bank.api",
+                "Port": 4002
+              }
             ],
             "UpstreamPathTemplate": "/api/loans",
             "UpstreamHttpMethod": [ "Get", "Post", "Delete", "Put" ],
@@ -70,6 +70,6 @@
         }
     ],
   "GlobalConfiguration": {
-    "BaseUrl": "https://localhost:5021"
+    "BaseUrl": "http://localhost:4000"
   }
 }

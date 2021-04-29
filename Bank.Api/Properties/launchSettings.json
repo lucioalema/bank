@@ -1,10 +1,11 @@
 ﻿{
+  "$schema": "http://json.schemastore.org/launchsettings.json",
   "iisSettings": {
-    "windowsAuthentication": false, 
-    "anonymousAuthentication": true, 
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:55357",
-      "sslPort": 0
+      "applicationUrl": "https://localhost:5002",
+      "sslPort": 5002
     }
   },
   "profiles": {
@@ -18,7 +19,8 @@
     "Bank": {
       "commandName": "Project",
       "launchBrowser": true,
-      "applicationUrl": "https://localhost:63749;http://localhost:20322",
+      "launchUrl": "api/loans",
+      "applicationUrl": "http://localhost:4002",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

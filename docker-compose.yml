@@ -1,0 +1,32 @@
+version: '3.4'
+
+services:
+  bank.auth.api:
+    image: ${DOCKER_REGISTRY-}bankauth
+    container_name: ${DOCKER_REGISTRY-}bankauth
+    hostname: bank.auth.api
+    build:
+      context: .
+      dockerfile: Bank.Auth.Api/Dockerfile
+
+
+  bank.api:
+    image: ${DOCKER_REGISTRY-}bankloans
+    container_name: ${DOCKER_REGISTRY-}bankloans
+    hostname: bank.api
+    build:
+      context: .
+      dockerfile: Bank.Api/Dockerfile
+
+  bank.apigateway:
+    image: ${DOCKER_REGISTRY-}bankgateway
+    container_name: ${DOCKER_REGISTRY-}bankgateway
+    build:
+      context: .
+      dockerfile: Bank.ApiGateway/Dockerfile
+    links:
+        - bank.auth.api
+        - bank.api
+    depends_on:
+        - bank.auth.api
+        - bank.api

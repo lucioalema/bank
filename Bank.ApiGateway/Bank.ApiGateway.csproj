@@ -2,12 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <DockerComposeProjectPath>../docker-compose.dcproj</DockerComposeProjectPath>
+    <UserSecretsId>d804371e-7597-47f9-a1f1-bb4b4caaf5c2</UserSecretsId>
   </PropertyGroup>
 
 
-  <ItemGroup>
-    <Content Remove="ocelot.Development.json" />
-  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.14" />
     <PackageReference Include="Ocelot" Version="16.0.1" />
