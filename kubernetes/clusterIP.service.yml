@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: bank-clusterip
+spec:
+  selector:
+    app: bank
+  ports:
+  - port: 4000
+    targetPort: 80

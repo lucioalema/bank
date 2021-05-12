@@ -35,9 +35,33 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bank.Loans.Infrastructure.B
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{9464F336-25D1-46CE-A2D3-6C933D7AA75E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bank.Loans.Application.Test", "Bank.Loans.Application.Test\Bank.Application.Test\Bank.Loans.Application.Test.csproj", "{5354881F-BAE1-4BED-9BAE-A3DF085EE5A3}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bank.Loans.Api", "Bank.Loans.Api\Bank.Loans.Api.csproj", "{E925F86E-B7EE-4F45-9F5E-015C330264F2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2-core", "2-core", "{06948A1E-1064-46F2-9FAC-8C6CBF1E64F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bank.Loans.Application.Test", "Bank.Loans.Application.Test\Bank.Loans.Application.Test.csproj", "{61D2E724-0DCD-452E-BBC0-8E17246C5A17}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bank.Loans.Domain.Test", "Bank.Loans.Domain.Test\Bank.Loans.Domain.Test.csproj", "{A5883CB9-086D-495F-B910-78B7BA261B88}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "deploy", "deploy", "{BA96CA33-06F8-42BD-9E1D-FD5F19173171}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "kubernetes", "kubernetes", "{89580527-BE20-41ED-984F-A0EA5B367BD0}"
+	ProjectSection(SolutionItems) = preProject
+		kubernetes\bank.apigateway.deployment.yml = kubernetes\bank.apigateway.deployment.yml
+		kubernetes\bank.auth.deployment.yml = kubernetes\bank.auth.deployment.yml
+		kubernetes\bank.auth.service.yml = kubernetes\bank.auth.service.yml
+		kubernetes\bank.loans.deployment.yml = kubernetes\bank.loans.deployment.yml
+		kubernetes\bank.loans.service.yml = kubernetes\bank.loans.service.yml
+		kubernetes\clusterIP.service.yml = kubernetes\clusterIP.service.yml
+		kubernetes\ingress.service.yml = kubernetes\ingress.service.yml
+		kubernetes\loadBalancer.service.yml = kubernetes\loadBalancer.service.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docker-compose", "docker-compose", "{1BA1BB3D-8E7E-4703-BF9D-9F985993C717}"
+	ProjectSection(SolutionItems) = preProject
+		.dockerignore = .dockerignore
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -89,14 +113,18 @@ Global
 		{9464F336-25D1-46CE-A2D3-6C933D7AA75E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9464F336-25D1-46CE-A2D3-6C933D7AA75E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9464F336-25D1-46CE-A2D3-6C933D7AA75E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5354881F-BAE1-4BED-9BAE-A3DF085EE5A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5354881F-BAE1-4BED-9BAE-A3DF085EE5A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5354881F-BAE1-4BED-9BAE-A3DF085EE5A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5354881F-BAE1-4BED-9BAE-A3DF085EE5A3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E925F86E-B7EE-4F45-9F5E-015C330264F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E925F86E-B7EE-4F45-9F5E-015C330264F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E925F86E-B7EE-4F45-9F5E-015C330264F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E925F86E-B7EE-4F45-9F5E-015C330264F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61D2E724-0DCD-452E-BBC0-8E17246C5A17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61D2E724-0DCD-452E-BBC0-8E17246C5A17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61D2E724-0DCD-452E-BBC0-8E17246C5A17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61D2E724-0DCD-452E-BBC0-8E17246C5A17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5883CB9-086D-495F-B910-78B7BA261B88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5883CB9-086D-495F-B910-78B7BA261B88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5883CB9-086D-495F-B910-78B7BA261B88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5883CB9-086D-495F-B910-78B7BA261B88}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -115,8 +143,12 @@ Global
 		{5355B83F-FB7E-4325-993E-755CECF49458} = {B175AFF1-A5F2-48D5-AF6D-7836F69D22C1}
 		{FDDC9D0C-84A5-45DE-9B25-280D6D101D9E} = {FE5AD9C4-4309-4309-8B2D-724447D86019}
 		{2F5F5EF9-0B93-440C-B80D-257EAABC8754} = {FE5AD9C4-4309-4309-8B2D-724447D86019}
-		{5354881F-BAE1-4BED-9BAE-A3DF085EE5A3} = {661CBBFA-3278-4E62-800E-A87A27F67649}
 		{E925F86E-B7EE-4F45-9F5E-015C330264F2} = {FE5D0D49-2804-4DA6-8B4A-88A45872A55F}
+		{06948A1E-1064-46F2-9FAC-8C6CBF1E64F2} = {661CBBFA-3278-4E62-800E-A87A27F67649}
+		{61D2E724-0DCD-452E-BBC0-8E17246C5A17} = {06948A1E-1064-46F2-9FAC-8C6CBF1E64F2}
+		{A5883CB9-086D-495F-B910-78B7BA261B88} = {06948A1E-1064-46F2-9FAC-8C6CBF1E64F2}
+		{89580527-BE20-41ED-984F-A0EA5B367BD0} = {BA96CA33-06F8-42BD-9E1D-FD5F19173171}
+		{1BA1BB3D-8E7E-4703-BF9D-9F985993C717} = {BA96CA33-06F8-42BD-9E1D-FD5F19173171}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5327D66D-6310-4603-80C9-22CF6FFE0B24}

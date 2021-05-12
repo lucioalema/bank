@@ -63,6 +63,7 @@ namespace Bank.Auth.Infrastructure.Bootstrap
             {
                 errorPipeline.UseExceptionHandlerMiddleware(this.configuration.GetValue("AppSettings:IncludeErrorDetailInResponse", false));
             });
+            app.UseHealthChecks("/health");
 
             app.UseEndpoints(endpoints =>
             {

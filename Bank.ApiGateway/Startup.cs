@@ -9,6 +9,7 @@ using Microsoft.IdentityModel.Tokens;
 using Ocelot.Cache.CacheManager;
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
+using Ocelot.Provider.Kubernetes;
 using System.Text;
 
 namespace Bank.ApiGateway
@@ -45,7 +46,7 @@ namespace Bank.ApiGateway
                 };
             });
 
-            services.AddOcelot().AddCacheManager(settings => settings.WithDictionaryHandle());
+            services.AddOcelot().AddKubernetes().AddCacheManager(settings => settings.WithDictionaryHandle());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

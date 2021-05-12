@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bank-loans-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bank-loans-api
+  template:
+    metadata:
+      labels:
+        app: bank-loans-api
+    spec:
+      containers:
+      - name: bank-loans-container
+        imagePullPolicy: Never
+        image: bank.loans.api:latest
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80
