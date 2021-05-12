@@ -23,7 +23,7 @@
       "launchUrl": "api/users",
       "applicationUrl": "http://localhost:4000",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "localhost"
+        "ASPNETCORE_ENVIRONMENT": "Development"
       }
     }
   }

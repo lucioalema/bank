@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/src/1-entrypoint/Bank.Loans.Api/Bank.Loans.Api.csproj",
+                "${workspaceFolder}/Bank.Loans.Api/Bank.Loans.Api.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -19,7 +19,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/src/1-entrypoint/Bank.Loans.Api/Bank.Loans.Api.csproj",
+                "${workspaceFolder}/Bank.Loans.Api/Bank.Loans.Api.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -32,7 +32,7 @@
             "args": [
                 "watch",
                 "run",
-                "${workspaceFolder}/src/1-entrypoint/Bank.Loans.Api/Bank.Loans.Api.csproj",
+                "${workspaceFolder}/Bank.Loans.Api/Bank.Loans.Api.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -47,12 +47,12 @@
             "dockerBuild": {
                 "tag": "bank:dev",
                 "target": "base",
-                "dockerfile": "${workspaceFolder}/src/1-entrypoint/Bank.Loans.Api/Dockerfile",
+                "dockerfile": "${workspaceFolder}/Bank.Loans.Api/Dockerfile",
                 "context": "${workspaceFolder}",
                 "pull": true
             },
             "netCore": {
-                "appProject": "${workspaceFolder}/src/1-entrypoint/Bank.Loans.Api/Bank.Loans.Api.csproj"
+                "appProject": "${workspaceFolder}/Bank.Loans.Api/Bank.Loans.Api.csproj"
             }
         },
         {
@@ -63,12 +63,12 @@
             ],
             "dockerBuild": {
                 "tag": "bank:latest",
-                "dockerfile": "${workspaceFolder}/src/1-entrypoint/Bank.Loans.Api/Dockerfile",
+                "dockerfile": "${workspaceFolder}/Bank.Loans.Api/Dockerfile",
                 "context": "${workspaceFolder}",
                 "pull": true
             },
             "netCore": {
-                "appProject": "${workspaceFolder}/src/1-entrypoint/Bank.Loans.Api/Bank.Loans.Api.csproj"
+                "appProject": "${workspaceFolder}/Bank.Loans.Api/Bank.Loans.Api.csproj"
             }
         },
         {
@@ -79,7 +79,7 @@
             ],
             "dockerRun": {},
             "netCore": {
-                "appProject": "${workspaceFolder}/src/1-entrypoint/Bank.Loans.Api/Bank.Loans.Api.csproj",
+                "appProject": "${workspaceFolder}/Bank.Loans.Api/Bank.Loans.Api.csproj",
                 "enableDebugging": true
             }
         },
@@ -91,7 +91,7 @@
             ],
             "dockerRun": {},
             "netCore": {
-                "appProject": "${workspaceFolder}/src/1-entrypoint/Bank.Loans.Api/Bank.Loans.Api.csproj"
+                "appProject": "${workspaceFolder}/Bank.Loans.Api/Bank.Loans.Api.csproj"
             }
         }
     ]

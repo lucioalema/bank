@@ -25,8 +25,8 @@ namespace Bank.ApiGateway
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //services.AddOcelot();
-            var secret = "123456ABC123456ABC";
+            services.AddHealthChecks();
+            var secret = Configuration.GetValue<string>("AppSettings:Secret");
             var key = Encoding.ASCII.GetBytes(secret);
             services.AddAuthentication(option =>
             {
@@ -59,6 +59,7 @@ namespace Bank.ApiGateway
             app.UseRouting();
 
             app.UseAuthentication();
+            app.UseHealthChecks("/health");
 
             app.UseEndpoints(endpoints =>
             {

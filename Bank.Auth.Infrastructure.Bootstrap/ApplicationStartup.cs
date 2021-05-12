@@ -27,6 +27,7 @@ namespace Bank.Auth.Infrastructure.Bootstrap
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddMicroserviceHealthChecks();
             services.AddSwagger("v1", "Bank.Auth.Api", "v1");
             services.ConfigureResponseCompression();
             services.AddHttpContextAccessor();
@@ -55,6 +56,7 @@ namespace Bank.Auth.Infrastructure.Bootstrap
 
             app.UseRouting();
             app.UseAuthentication();
+            app.UseMicroserviceHealthChecks();
             app.UseResponseCompression();
             app.UseMicroserviceExampleSwagger();
             app.UseInitializer();

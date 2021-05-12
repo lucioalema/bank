@@ -27,7 +27,8 @@ namespace Bank.Loans.Infrastructure.Bootstrap
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddSwagger("v1", "Bank.Api", "v1");
+            services.AddMicroserviceHealthChecks();
+            services.AddSwagger("v1", "Bank.Loans.Api", "v1");
             services.ConfigureResponseCompression();
             services.AddHttpContextAccessor();
             services.AddCorsConfiguration();
@@ -50,6 +51,7 @@ namespace Bank.Loans.Infrastructure.Bootstrap
         {
             app.UseRouting();
             app.UseAuthentication();
+            app.UseMicroserviceHealthChecks();
             app.UseResponseCompression();
             app.UseMicroserviceExampleSwagger();
             app.UseInitializer();

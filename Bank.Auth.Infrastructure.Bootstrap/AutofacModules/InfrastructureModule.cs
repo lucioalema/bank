@@ -25,7 +25,7 @@ namespace Bank.Auth.Infrastructure.Bootstrap.AutofacModules
                 .InstancePerLifetimeScope();
             builder.RegisterType<UserService>()
              .As<IUserService>()
-             //.WithParameter("SymmetricKey", configuration["AppSettings:SymmetricKey"])
+             .WithParameter("configuration", configuration)
              .InstancePerLifetimeScope();
         }
     }
