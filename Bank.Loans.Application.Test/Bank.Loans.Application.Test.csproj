@@ -24,7 +24,7 @@
     <None Include="..\..\.editorconfig" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Bank.Loans.Domain\Bank.Loans.Domain.csproj" />
-    <ProjectReference Include="..\..\Bank.Loans.Application\Bank.Loans.Application.csproj" />
+    <ProjectReference Include="..\Bank.Loans.Domain\Bank.Loans.Domain.csproj" />
+    <ProjectReference Include="..\Bank.Loans.Application\Bank.Loans.Application.csproj" />
   </ItemGroup>
 </Project>
