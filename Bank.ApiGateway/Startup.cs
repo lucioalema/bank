@@ -61,15 +61,6 @@ namespace Bank.ApiGateway
             app.UseAuthentication();
             app.UseHealthChecks("/health");
 
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapGet("/", async context =>
-                {
-                    await context.Response.WriteAsync("Hello World!");
-                });
-            });
-
-
             app.UseOcelot().Wait();
         }
     }
