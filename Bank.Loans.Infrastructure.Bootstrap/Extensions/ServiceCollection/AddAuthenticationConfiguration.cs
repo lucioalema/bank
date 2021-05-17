@@ -19,7 +19,7 @@ namespace Bank.Loans.Infrastructure.Bootstrap.Extensions.ServiceCollection
                         ValidateAudience = true,
                         ValidateLifetime = true,
                         ValidateIssuerSigningKey = true,
-                        ValidIssuer = configuration["AppSettings:Domain"],
+                        ValidIssuer = configuration["AppSettings:Issuer"],
                         ValidAudience = configuration["AppSettings:Audience"],
                         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["AppSettings:SymmetricKey"]))
                     };

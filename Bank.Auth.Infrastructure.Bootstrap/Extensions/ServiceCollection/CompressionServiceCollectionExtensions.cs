@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.Extensions.DependencyInjection;
 using System.IO.Compression;
 
-namespace Bank.Loans.Infrastructure.Bootstrap.Extensions.ServiceCollection
+namespace Bank.Auth.Infrastructure.Bootstrap.Extensions.ServiceCollection
 {
     public static class CompressionServiceCollectionExtensions
     {

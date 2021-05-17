@@ -51,6 +51,7 @@ namespace Bank.Loans.Infrastructure.Bootstrap
         {
             app.UseRouting();
             app.UseAuthentication();
+            app.UseAuthorization();
             app.UseMicroserviceHealthChecks();
             app.UseResponseCompression();
             app.UseMicroserviceExampleSwagger();

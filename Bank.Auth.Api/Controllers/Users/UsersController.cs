@@ -2,9 +2,9 @@
 using Bank.Auth.Application.Features.Users.Dtos;
 using Bank.Auth.Application.Features.Users.Queries;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -12,6 +12,7 @@ namespace Bank.Auth.Api.Controllers.Users
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize("JwtPolicy")]
     public class UsersController : ControllerBase
     {
         private readonly IMediator _mediator;
@@ -44,6 +45,7 @@ namespace Bank.Auth.Api.Controllers.Users
         /// <param name="request">Add user command.</param>
         /// <returns>id</returns>
         [HttpPost]
+        [AllowAnonymous]
         public async Task<IActionResult> Post([FromBody] AuthenticateUserCommand request)
         {
             var result = await _mediator.Send(request);

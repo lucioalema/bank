@@ -36,8 +36,10 @@ namespace Bank.Auth.Infrastructure.Services
                 Subject = new ClaimsIdentity(new Claim[]
                 {
                     new Claim(ClaimTypes.NameIdentifier, user.UserName),
-                    new Claim("avatar", user.Avatar)
+                    new Claim("avatar", user.Avatar),
                 }),
+                Audience = configuration["AppSettings:Audience"],
+                Issuer = configuration["AppSettings:Issuer"],
                 Expires = DateTime.UtcNow.AddDays(7),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
             };

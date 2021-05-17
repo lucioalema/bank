@@ -4,14 +4,14 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 
-namespace Bank.Loans.Infrastructure.Bootstrap.Extensions.ServiceCollection
+namespace Bank.Auth.Infrastructure.Bootstrap.Extensions.ServiceCollection
 {
     public static class AuthenticationServiceCollectionExtensions
     {
         public static void AddAuthenticationConfiguration(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-                .AddJwtBearer(options =>
+            .AddJwtBearer(options =>
                 {
                     options.TokenValidationParameters = new TokenValidationParameters
                     {
@@ -19,19 +19,10 @@ namespace Bank.Loans.Infrastructure.Bootstrap.Extensions.ServiceCollection
                         ValidateAudience = true,
                         ValidateLifetime = true,
                         ValidateIssuerSigningKey = true,
-                        ValidIssuer = configuration["AppSettings:Domain"],
+                        ValidIssuer = configuration["AppSettings:Issuer"],
                         ValidAudience = configuration["AppSettings:Audience"],
                         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["AppSettings:SymmetricKey"]))
                     };
-                    //options.RequireHttpsMetadata = false;
-                    //options.SaveToken = true;
-                    //options.TokenValidationParameters = new TokenValidationParameters
-                    //{
-                    //    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["AppSettings:SymmetricKey"])),
-                    //    ValidateIssuerSigningKey = true,
-                    //    ValidateIssuer = false,
-                    //    ValidateAudience = false
-                    //};
                 });
         }
     }

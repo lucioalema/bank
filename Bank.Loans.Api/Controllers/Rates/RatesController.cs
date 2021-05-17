@@ -2,6 +2,7 @@
 using Bank.Loans.Application.Features.Rates.Dtos;
 using Bank.Loans.Application.Features.Rates.Queries;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -12,6 +13,7 @@ namespace Bank.Api.Controllers.Rates
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize("JwtPolicy")]
     public class RatesController : ControllerBase
     {
         private readonly IMediator _mediator;

@@ -23,6 +23,7 @@ namespace Bank.Auth.Api
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            this.ConfigureAuthorization(services);
             _startup.ConfigureServices(services);
         }
 
@@ -43,6 +44,11 @@ namespace Bank.Auth.Api
         public void ConfigureContainer(ContainerBuilder builder)
         {
             _startup.ConfigureContainer(builder);
+        }
+
+        protected virtual void ConfigureAuthorization(IServiceCollection services)
+        {
+            _startup.ConfigureAuthorization(services);
         }
     }
 }

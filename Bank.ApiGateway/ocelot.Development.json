@@ -44,30 +44,54 @@
                 "AllowedScopes": []
             }
         },
-        {
-            "DownstreamPathTemplate": "/api/loans",
-            "DownstreamScheme": "http",
-            "DownstreamHostAndPorts": [
-              {
-                "Host": "bank.loans.api",
-                "Port": 4002
-              }
-            ],
-            "UpstreamPathTemplate": "/api/loans",
-            "UpstreamHttpMethod": [ "Get", "Post", "Delete", "Put" ],
-            "AuthenticationOptions": {
-                "AuthenticationProviderKey": "Bearer",
-                "AllowedScopes": []
-            },
-            "RateLimitOptions": {
-                "ClientWhitelist": [],
-                "EnableRateLimiting": true,
-                "Period": "5s",
-                "PeriodTimespan": 1,
-                "Limit": 1
-            },
-            "FileCacheOptions": { "TtlSeconds": 30 }
-        }
+      {
+        "DownstreamPathTemplate": "/api/loans",
+        "DownstreamScheme": "http",
+        "DownstreamHostAndPorts": [
+          {
+            "Host": "bank.loans.api",
+            "Port": 4002
+          }
+        ],
+        "UpstreamPathTemplate": "/api/loans",
+        "UpstreamHttpMethod": [ "Get", "Post", "Delete", "Put" ],
+        "AuthenticationOptions": {
+          "AuthenticationProviderKey": "Bearer",
+          "AllowedScopes": []
+        },
+        "RateLimitOptions": {
+          "ClientWhitelist": [],
+          "EnableRateLimiting": true,
+          "Period": "5s",
+          "PeriodTimespan": 1,
+          "Limit": 1
+        },
+        "FileCacheOptions": { "TtlSeconds": 30 }
+      },
+      {
+        "DownstreamPathTemplate": "/api/fees",
+        "DownstreamScheme": "http",
+        "DownstreamHostAndPorts": [
+          {
+            "Host": "bank.loans.api",
+            "Port": 4002
+          }
+        ],
+        "UpstreamPathTemplate": "/api/fees",
+        "UpstreamHttpMethod": [ "Get", "Post", "Delete", "Put" ],
+        "AuthenticationOptions": {
+          "AuthenticationProviderKey": "Bearer",
+          "AllowedScopes": []
+        },
+        "RateLimitOptions": {
+          "ClientWhitelist": [],
+          "EnableRateLimiting": true,
+          "Period": "5s",
+          "PeriodTimespan": 1,
+          "Limit": 1
+        },
+        "FileCacheOptions": { "TtlSeconds": 30 }
+      }
     ],
   "GlobalConfiguration": {
     "BaseUrl": "http://localhost:4000"

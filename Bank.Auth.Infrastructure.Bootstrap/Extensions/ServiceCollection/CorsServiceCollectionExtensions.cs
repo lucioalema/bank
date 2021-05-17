@@ -1,7 +1,6 @@
-﻿using System;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 
-namespace Bank.Loans.Infrastructure.Bootstrap.Extensions.ServiceCollection
+namespace Bank.Auth.Infrastructure.Bootstrap.Extensions.ServiceCollection
 {
     public static class CorsServiceCollectionExtensions
     {

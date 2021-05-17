@@ -1,11 +1,9 @@
-﻿using Bank.Auth.Domain.Users;
-using Bank.Auth.Infrastructure.DataAccess.EF;
-using Bank.Auth.Infrastructure.Repositories;
+﻿using Bank.Auth.Infrastructure.DataAccess.EF;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Bank.Loans.Infrastructure.Bootstrap.Extensions.ServiceCollection
+namespace Bank.Auth.Infrastructure.Bootstrap.Extensions.ServiceCollection
 {
     public static class EFServiceCollectionExtensions
     {

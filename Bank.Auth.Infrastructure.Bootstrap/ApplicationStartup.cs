@@ -4,19 +4,21 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Hosting;
 using Autofac;
-using Bank.Loans.Infrastructure.Bootstrap.Extensions.ServiceCollection;
 using MediatR;
 using System.Text.Json.Serialization;
 using Bank.Auth.Infrastructure.Bootstrap.Extensions.ServiceCollection;
 using Bank.Auth.Infrastructure.Bootstrap.Extensions.ApplicationBuilder;
 using Microsoft.Extensions.Hosting;
 using Bank.Auth.Application.Features.Users.Queries;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Bank.Loans.Infrastructure.Bootstrap.Extensions.ServiceCollection;
 
 namespace Bank.Auth.Infrastructure.Bootstrap
 {
     public class ApplicationStartup
     {
         public IConfiguration configuration { get; }
+        private const string JWT_POLICY = "JwtPolicy";
         private readonly IWebHostEnvironment env;
 
         public ApplicationStartup(IConfiguration configuration, IWebHostEnvironment env)
@@ -56,6 +58,7 @@ namespace Bank.Auth.Infrastructure.Bootstrap
 
             app.UseRouting();
             app.UseAuthentication();
+            app.UseAuthorization();
             app.UseMicroserviceHealthChecks();
             app.UseResponseCompression();
             app.UseMicroserviceExampleSwagger();
@@ -71,6 +74,19 @@ namespace Bank.Auth.Infrastructure.Bootstrap
                 endpoints.MapDefaultControllerRoute();
                 endpoints.MapControllers();
             });
+        }
+
+        public void ConfigureAuthorization(IServiceCollection services)
+        {
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy(JWT_POLICY, policy =>
+                {
+                    policy.RequireAuthenticatedUser()
+                        .AddAuthenticationSchemes(JwtBearerDefaults.AuthenticationScheme);
+                });
+            });
+            services.AddAuthenticationConfiguration(configuration);
         }
     }
 }
